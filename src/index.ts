@@ -23,6 +23,6 @@ app.get("/user", isLoggedIn, (req: IRequestWithUser, res) => {
   console.log(req.user);
   res.json(req.user);
 });
-app.listen(3000, (): void => {
+app.listen(port, (): void => {
   console.log("server started successfully");
 });
