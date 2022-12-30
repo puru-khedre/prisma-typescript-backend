@@ -4,6 +4,8 @@ import cookieParser from "cookie-parser";
 import userRouter from "./routes/userRoutes";
 import isLoggedIn, { IRequestWithUser } from "./middlewares/isLoggedIn";
 
+const port: string | number = process.env.PORT;
+
 const app: Application = express();
 
 app.use(express.json());
