@@ -15,14 +15,6 @@ app.use(cookieParser());
 
 app.use("/api", userRouter);
 
-app.get("/", isLoggedIn, (req, res) => {
-  res.send("you are logged in");
-});
-
-app.get("/user", isLoggedIn, (req: IRequestWithUser, res) => {
-  console.log(req.user);
-  res.json(req.user);
-});
 app.listen(port, (): void => {
   console.log("server started successfully");
 });
